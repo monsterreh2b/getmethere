@@ -33,7 +33,11 @@ function convert(value) {
     return Math.floor(value / 60) + ":" + (value % 60 ? value % 60 : '00')
 }
 
+function dollar (value){
 
+
+return( (value/100).toFixed( 2 ) );
+}
 authenticateLyft()
 .then(function(response) {
   LYFT_TOKEN = response.data.access_token;
@@ -50,7 +54,7 @@ authenticateLyft()
    console.log(results);
    console.log(results.cost_estimates[2].estimated_duration_seconds);
    $("#lyft").append("<br>" + "Lyft average duration: " + convert(results.cost_estimates[2].estimated_duration_seconds) + " minutes");
-   $("#lyft").append("<br>" + "Lyft average cost: " + results.cost_estimates[2].estimated_cost_cents_min + " cents");
+   $("#lyft").append("<br>" + "Lyft average cost: $" + dollar(results.cost_estimates[2].estimated_cost_cents_min) + " dollars");
 })
 .catch(function(err) {
 
