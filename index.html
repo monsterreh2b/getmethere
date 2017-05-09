@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GetMeThere</title>
+  <!-- Bootswatch Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.js"></script>
+  <!-- Style to fix the issue of text extending past panel length -->
+  <style>
+    .panel-body a {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+
+ <nav class="navbar navbar-default gmtnav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="assets/images/logo.png">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+
+
+<form>
+  <div class="form-group">
+    <label for="startAddress">Start Address</label>
+    <input type="input" class="form-control" id="startAddress" placeholder="Enter Starting Address">
+  </div>
+  <div class="form-group">
+    <label for="endAddress">End Address</label>
+    <input type="input" class="form-control" id="endAddress" placeholder="Enter Ending Address">
+  </div>
+  <button type="submit" class="btn btn-default" id="getMeThere">Submit</button>
+</form>
+
+
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 lyft" id="lyft">Placeholder</div>
+  <div class="col-md-4 uber">Placeholder</div>
+  <div class="col-md-4 google">Placeholder</div>
+</div>
+</div>
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Code to the JavaScript File -->
+  <script src="./resources/javascript/app.js"></script>
+
+</body>
+
+</html>
+
+
+
+
