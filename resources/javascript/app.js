@@ -61,10 +61,10 @@ authenticateLyft()
   console.error(err);
 })
 
-
-
-
-$("#getMeThere").on("click", function() {
+$(document).ready(function(){
+  console.log("hi");
+$("#target").submit(function(event) {
+  event.preventDefault();
        var inputAddress = $("#startAddress").val();
        console.log(inputAddress);
 
@@ -82,6 +82,9 @@ $("#getMeThere").on("click", function() {
 
 });
 });
+});
+
+
 
 
 
