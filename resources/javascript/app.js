@@ -2,6 +2,8 @@
 var CLIENT_ID = "4VUhVhVOSdP8";
 var SECRET = "EghRc_w20qL6BntxutRQxDr1MMpB-Y3g";
 var LYFT_TOKEN;
+var startLat;
+var startLong;
 
 
 
@@ -70,7 +72,7 @@ $("#target").submit(function(event) {
 
 
   var key= "AIzaSyAmoeeVA0-TiJTpH5tOGpwKGpPtryW51oY"
-  var queryURL= "https://maps.googleapis.com/maps/api/geocode/json?address=" + inputAddress + key;
+  var queryURL= "https://maps.googleapis.com/maps/api/geocode/json?address="+inputAddress+"&key="+key;
 
        $.ajax({
            url: queryURL,
@@ -78,8 +80,11 @@ $("#target").submit(function(event) {
         })
          .done(function(response) {
            console.log(response);
-           
-
+           var resultsA = response.results;
+           console.log(resultsA[0].geometry.location.lat);
+           console.log(resultsA[0].geometry.location.lng);
+            startLat =   resultsA[0].geometry.location.lat;
+            startLong = resultsA[0].geometry.location.lng;
 });
 });
 });
